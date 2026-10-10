@@ -1,0 +1,10 @@
+name: Try workflow manual dispatch
+on: 
+  workflow_dispatch:
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step1
+        run: echo "This is my step1"
+
