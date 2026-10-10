@@ -133,36 +133,6 @@ A simple rule:
 - use `run` for commands you write yourself
 - use `uses` for prebuilt actions that perform a task for you
 
-## Example Workflow
-
-```yaml
-name: CI
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm test
-```
 
 This example shows the basic flow of a CI workflow:
 
@@ -171,43 +141,15 @@ This example shows the basic flow of a CI workflow:
 3. set up the environment
 4. install dependencies
 5. run tests
-
-## Repository Structure
-
-```text
-Learn-Actions/
-├── README.md
-├── CI_CD/
-├── Triggers/
+/
 └── .github/workflows/
 ```
-
-- `README.md` contains the main overview and learning notes
-- `CI_CD/` is intended for CI/CD examples and deployment workflow projects
-- `Triggers/` is intended for event-based trigger examples
-- `.github/workflows/` stores the actual GitHub Actions YAML workflow files
 
 ## Why GitHub Actions Matter
 
 GitHub Actions helps teams automate repetitive development tasks and improve software delivery speed. It reduces manual work, ensures consistency, and enables reliable deployment pipelines.
 
-## Suggested Learning Path
 
-1. Understand basic workflow structure
-2. Practice triggers like push and pull request
-3. Learn jobs, steps, and runners
-4. Build simple CI pipelines
-5. Add deployment workflows for staging or production
-6. Explore secrets, environments, and approvals
-
-## Next Steps
-
-Use this repository as a learning workspace to explore:
-
-- CI/CD workflows
-- event-based automation
-- release pipelines
-- GitHub Actions best practices
 
 This project is designed to help you become more comfortable with automation using GitHub Actions.
 
